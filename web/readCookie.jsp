@@ -8,17 +8,16 @@
 <%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
 <html>
   <head>
-    <title>第二个JSP界面</title>
+    <title>读取客户端cookie</title>
   </head>
   <body>
-     <%
-         for (int i = 0; i < 7; i++)
-         {
-             out.println("<font size='" + i + "'>");
-             %>
-     疯狂 Java</font>
-     <br/>
-     <%}
-     %>
+    <%
+        Cookie[] cookies = request.getCookies();
+        for (Cookie cookie : cookies){
+            if (cookie.getName().equals("username")){
+                out.println(cookie.getValue());
+            }
+        }
+    %>
   </body>
 </html>

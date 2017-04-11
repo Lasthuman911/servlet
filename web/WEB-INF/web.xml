@@ -3,7 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-
+<!--
+    <servlet>
+        <servlet-name>timerServlet</servlet-name>
+        <servlet-class>com.example.web.TimerServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>-->
         <servlet>
             <servlet-name>Ch3 beer</servlet-name>
             <servlet-class>com.example.web.BeerSelect</servlet-class>
@@ -19,5 +24,25 @@
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>oracle.jdbc.OracleDriver</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:oracle:thin:@10.16.111.245:1521:testdb1</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>TRULYMESTST</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>pass</param-name>
+        <param-value>trulymestst</param-value>
+    </context-param>
 
 </web-app>

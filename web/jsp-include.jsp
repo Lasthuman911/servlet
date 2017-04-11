@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html; charset=GBK" language="java" errorPage="" %>
+<html>
   <head>
     <title>jsp include-jsp¶¯Ì¬µ¼Èë</title>
   </head>
